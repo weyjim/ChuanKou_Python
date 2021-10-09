@@ -17,3 +17,4 @@ for i in range(2000):
     plt.plot(t,m,'-r')
     
     plt.pause(0.01)
+ 
