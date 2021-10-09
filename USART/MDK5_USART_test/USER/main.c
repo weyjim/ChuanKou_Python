@@ -8,7 +8,7 @@ int main(void)
 	uart_init(115200);
 	while(1)
 	{
-		printf("why\n");
+		printf("PWM=234.22,Angle=15.432\n");
 		delay_ms(1000);
 	}
 }
