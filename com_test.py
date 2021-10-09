@@ -7,7 +7,11 @@ print(ser)
 ser.open()
 print(ser.is_open)      #成功打开会显示True
 
+Str_flag = 0               #字符串转数据标志位
+i = 0                   
+
 while(1):
-    Bytes = serial.readline()
-    Bytes_Str = Bytes.decode('utf-8')    #byte转字符
-    print(Bytes_Str)
+    Bytes = ser.readline()              #读取字符串至\n或\r(注意timeout)
+    Bytes_Str = Bytes.decode('utf-8')   #byte转字符
+    print(Bytes_Str , end='\0')         #字符串中已包含\n，故pirnt不换行
+            
