@@ -11,14 +11,11 @@ ser.open()
 if(ser.is_open):
     print("串口打开成功")
 
-plt,ion()
-plt.figure()
+y_axis = [0]            #定义y轴变量
 
-t = [0]
+#PWM_SAVE = 0            #定义PWM历史数据
 
-PWM_SAVE = 0
-
-while(1):
+for i in range(10):
     plt.clf()
     
     Bytes = ser.readline()              #读取字符串至\n或\r(注意timeout)
@@ -29,9 +26,10 @@ while(1):
     
     print("PWM=" , PWM , type(PWM) , '\n')
 
-    t.append(PWM)
-    plt.plot(PWM, PWM_SAVE, '-r')
-
-    plt.pause(0.01)
-    PWM_SAVE = PWM
-
+    y_axis.append(PWM)
+#   plt.plot(PWM, PWM_SAVE, '-r')
+#    PWM_SAVE = PWM
+    
+plt.plot(y_axis)
+plt.grid(True)
+plt.show()
