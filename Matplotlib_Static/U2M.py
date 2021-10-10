@@ -11,9 +11,9 @@ ser.open()
 if(ser.is_open):
     print("串口打开成功")
 
-y_axis = [0]            #定义y轴变量
+y_axis = [0]            #定义y轴列表
 
-#PWM_SAVE = 0            #定义PWM历史数据
+#PWM_SAVE = 0           #定义PWM历史数据
 
 for i in range(10):
     plt.clf()
