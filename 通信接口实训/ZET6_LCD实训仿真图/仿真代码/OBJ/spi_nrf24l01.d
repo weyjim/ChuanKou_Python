@@ -1,0 +1,1 @@
+..\obj\spi_nrf24l01.o: ..\TEACHING\SPI_NRF24L01\SPI_NRF24L01.c
